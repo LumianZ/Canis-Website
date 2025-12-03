@@ -1,16 +1,45 @@
+/* ----------------- ESTILOS BÁSICOS ----------------- */
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   background-color: #f4f4f4;
+  color: #2c3e50;
 }
 
 header {
   background-color: #2c3e50;
   color: #fff;
-  padding: 30px 20px;
-  text-align: center;
 }
+
+/* ----------------- INTRO / HERO ----------------- */
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  text-align: center;
+  max-width: 320px;
+}
+
+.intro-text h1 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+}
+
+.intro-text p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ----------------- NAV ----------------- */
 
 nav {
   background-color: #34495e;
@@ -21,6 +50,7 @@ nav {
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 nav ul li {
@@ -31,6 +61,59 @@ nav ul li {
 nav a {
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------- SLIDERS ----------------- */
+
+.slider,
+.slider-video {
+  width: 250px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.25);
+  background-color: #000;
+}
+
+.slider figure,
+.slider-video figure {
+  display: flex;
+  position: relative;
+  width: 1250px; /* 5 elementos x 250px */
+  margin: 0;
+  animation: slide 30s infinite;
+}
+
+.slider img,
+.slider-video video {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Animación del slider */
+@keyframes slide {
+  0%   { left: 0; }
+  20%  { left: 0; }
+  25%  { left: -250px; }
+  40%  { left: -250px; }
+  45%  { left: -500px; }
+  60%  { left: -500px; }
+  65%  { left: -750px; }
+  80%  { left: -750px; }
+  85%  { left: -1000px; }
+  100% { left: -1000px; }
+}
+
+/* ----------------- CONTENIDO PRINCIPAL ----------------- */
+
+main {
+  padding: 20px 0;
 }
 
 section {
@@ -43,75 +126,55 @@ section {
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
+section h2 {
+  margin-top: 0;
+}
+
+/* ----------------- CONTACTO: BOTONES WHATSAPP ----------------- */
+
+#contacto a[href*="wa.me"] {
+  background-color: #25D366;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#contacto a[href*="wa.me"]:hover {
+  background-color: #1ebe5d;
+}
+
+#contacto a[href^="mailto:"] {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+#contacto a[href^="mailto:"]:hover {
+  text-decoration: underline;
+}
+
+/* ----------------- FOOTER ----------------- */
+
 footer {
   background-color: #2c3e50;
   color: #fff;
   text-align: center;
   padding: 15px;
   margin-top: 20px;
+  font-size: 0.9rem;
 }
 
-.intro {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap; /* para pantallas pequeñas */
-}
+/* ----------------- RESPONSIVE ----------------- */
 
-header {
-  flex: 1;
-  text-align: center;
-}
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+  }
 
-.slider, .slider-video {
-  width: 250px;
-  height: 180px;
-  overflow: hidden;
-}
-
-.slider figure, .slider-video figure {
-  display: flex;
-  position: relative;
-  width: 1000px;
-  animation: slide 30s infinite;
-}
-
-.slider img, .slider-video video {
-  width: 250px;
-  height: 180px;
-  object-fit: cover;
-}
-
-@keyframes slide {
-  0% { left: 0; }
-  25% { left: -250px; }
-  50% { left: -500px; }
-  75% { left: -750px; }
-  100% { left: 0; }
-}
-
-.intro {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap;
-  background-color: #ecf0f1;
-}
-
-.intro header {
-  flex: 1;
-  background-color: transparent;
-  color: #2c3e50;
-  padding: 20px;
-  text-align: center;
-}
-
-.intro .slider,
-.intro .slider-video {
-  margin: 0;
-  flex-shrink: 0;
+  .intro-text h1 {
+    font-size: 1.5rem;
+  }
 }
