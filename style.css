@@ -102,6 +102,7 @@ nav a:hover {
   width: 250px;
   height: 180px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 @keyframes slide {
