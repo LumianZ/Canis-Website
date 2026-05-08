@@ -252,22 +252,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ----------------- RESPONSIVE ----------------- */
-
-@media (max-width: 768px) {
-  .intro {
-    flex-direction: column;
-  }
-  
-  .slider, .slider-video {
-      width: 100%;
-      max-width: 300px; 
-  }
-  
-  .intro-text h1 {
-    font-size: 1.5rem;
-  }
-}
 /* ----------------- BLOG / CONSEJOS (ADSENSE) ----------------- */
 
 .blog-grid {
@@ -315,6 +299,7 @@ footer {
   text-decoration: underline;
   color: #c0392b;
 }
+
 /* Estilos botones TikTok */
 .btn-tiktok {
   background-color: #000000;
@@ -333,40 +318,37 @@ footer {
 .btn-tiktok:hover {
   background-color: #222222;
   transform: translateY(-2px);
-  /* Efecto visual con los colores de marca de TikTok */
   box-shadow: -2px 2px 0px #00f2fe, 2px -2px 0px #fe0979; 
 }
+
 /* ===================================================
    DISEÑO RESPONSIVO (SOLO PARA CELULARES Y TABLETS)
    =================================================== */
 @media (max-width: 768px) {
   
-  /* 1. Ordenar el menú para que se vea centrado y simétrico */
+  /* Pone el texto debajo del video para que no se aprieten */
+  .intro {
+    flex-direction: column;
+  }
+
+  /* Ordenar el menú centrado */
   nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     padding: 10px;
   }
 
-  /* 2. Ajustar los contenedores de los videos/imágenes para que no se asome el siguiente */
-  .slider-video, .slider {
-    width: 95%; /* Da un pequeño margen a los lados */
+  /* EL ARREGLO DEL SLIDER: Lo forzamos a 250px exactos para que la matemática de tu animación funcione perfecto */
+  .slider, .slider-video {
+    width: 250px !important;
     margin: 0 auto;
-    overflow: hidden; /* Corta cualquier elemento que se salga del recuadro */
     border-radius: 10px;
   }
 
-  /* 3. Evitar que los videos e imágenes se vean aplastados */
-  .slider-video video, .slider img {
-    height: 250px; /* Les da una altura fija bonita en celular */
-    object-fit: cover; /* Hace que el video se recorte mágicamente sin deformarse */
-  }
-
-  /* 4. Ajustar el tamaño del título para que no ocupe tanta pantalla */
   .intro-text h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 0 10px;
   }
 }
