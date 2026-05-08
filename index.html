@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CANIS TRAINING SERVICE - Belén & Rosa</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2684236202445396"
      crossorigin="anonymous"></script>
@@ -130,44 +131,48 @@
 
       <div class="form-container">
         <h3>Opción 2: Envíanos un mensaje detallado</h3>
-        <form id="contactForm" action="mailto:mhigueraholguin@gmail.com,rosahiguera17@hotmail.com" method="post" enctype="text/plain">
-            <div class="form-group">
-                <label for="nombre">Tu Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
-            </div>
+        <form action="https://api.web3forms.com/submit" method="POST">
+    
+    <input type="hidden" name="access_key" value="TU_LLAVE_DE_ACCESO_AQUI">
+    <input type="hidden" name="redirect" value="https://adiestramientomanta.com">
 
-            <div class="form-group">
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 099..." required>
-            </div>
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+    </div>
 
-            <div class="form-group">
-                <label for="servicio">Servicio de interés:</label>
-                <select id="servicio" name="servicio">
-                    <option value="obediencia">Obediencia Básica</option>
-                    <option value="conducta">Modificación de Conducta</option>
-                    <option value="domicilio">Adiestramiento a Domicilio</option>
-                    <option value="paseo">Paseos Educativos</option>
-                    <option value="otro">Otro / Consulta General</option>
-                </select>
-            </div>
+    <div class="form-group">
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
+    </div>
 
-            <div class="form-group">
-                <label for="mensaje">Cuéntanos sobre tu perro (Edad, Raza, Problema):</label>
-                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ej: Mi perro firulais tira mucho de la correa..." required></textarea>
-            </div>
+    <div class="form-group">
+        <label for="servicio">Servicio de interés:</label>
+        <select id="servicio" name="servicio">
+            <option value="obediencia">Obediencia Básica</option>
+            <option value="conducta">Modificación de Conducta</option>
+            <option value="domicilio">Adiestramiento a Domicilio</option>
+            <option value="paseo">Paseos Educativos</option>
+            <option value="otro">Otro / Consulta General</option>
+        </select>
+    </div>
 
-            <button type="submit" class="btn-submit">Enviar Solicitud</button>
-        </form>
+    <div class="form-group">
+        <label for="mensaje">Cuéntanos sobre tu perro (Edad, Raza, Problema):</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ej: Mi perro firulais tira mucho de la correa." required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Enviar Solicitud</button>
+
+      </form>
       </div>
       
       <div class="emails-info">
-        <p>📧 También puedes escribirnos a: <br>
-           <a href="mailto:mhigueraholguin@gmail.com">mhigueraholguin@gmail.com</a> | 
-           <a href="mailto:rosahiguera17@hotmail.com">rosahiguera17@hotmail.com</a>
+        <p>📧 También puedes escribirnos directamente a: <br>
+             mhiguera@gmail.com | rosahiguera17@hotmail.com
         </p>
         <p>📍 Ubicación: Manta - Manabí - Ecuador</p>
-      </div>
+        </div>
     </section>
   </main>
 
